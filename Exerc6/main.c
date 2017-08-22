@@ -7,7 +7,7 @@ int main()
     int i = 0, cont = 0, j = 0;
     char dados[50], invertido[50];
 
-    printf("Digite a sequ%cncia:\n\n", 136);
+    printf("Digite a sequencia:\n\n", 136);
     scanf("%c", &dados);
 
     while (dados[i] != '\0')
@@ -28,11 +28,11 @@ int main()
     invertido [j] = '\0';
     if(strcmp(dados, invertido) == 0)
 {
-        printf("\n\nPal%cndromo!\n\n", 161);
+        printf("\n\nPalindromo!\n\n", 161);
 }
     else
 {
-    printf("\n\nN%co %c um pal%cndromo!\n\n", 198, 130, 161);
+    printf("\n\nNao eh um palindromo!\n\n", 198, 130, 161);
 }
     printf("\n");
 
