@@ -1,26 +1,30 @@
 #include <stdio.h>
-#define MAX 2
+#define MAX 3
 
-/*Escreva um programa que leia uma lista contendo o peso de uma série de indivíduos em um vetor de
-números reais. A lista possui 150 elementos.
-Depois que a lista foi toda inserida o programa deve procurar e imprimir qual a posição no vetor onde
-está o menor peso.*/
+/*Escreva um programa que leia uma lista contendo o peso de uma sÃ©rie de indivÃ­duos em um vetor de
+nÃºmeros reais. A lista possui 150 elementos.
+Depois que a lista foi toda inserida o programa deve procurar e imprimir qual a posiÃ§Ã£o no vetor onde
+estÃ¡ o menor peso.*/
 
 int main()
 {
     float peso[MAX], maior=0, menor=0;
-    int i;
+    int i, aux=0;
 
     for (i=0 ; i<MAX ; i++){
-        printf("peso %d: \n", i+1);
+        printf("peso %d: ", i+1);
         scanf("%f", &peso[i]);
     }
     menor = peso[0];
     for (i=0 ; i<MAX ; i++)
     {
-        if (menor > peso[i]) menor = peso[i];
+        if (menor > peso[i])
+            {menor = peso[i];
+            aux=i+1;
     }
-    printf("%.2f menor %.2f", menor);
+    }
+    printf("\n%.2f menor na posicao do vetor %d\n", menor, aux);
 
     return 0;
 }
+
